@@ -21,6 +21,7 @@ void parse_command(char *command, char *args[MAX_ARGS]) {
 }
 
 int execute_command(char **args) {
+    
     pid_t pid, wpid;
     int status;
 
@@ -44,6 +45,7 @@ int execute_command(char **args) {
 }
 
 int execute_builtin_or_external(char **args) {
+    
     if(args[0] == NULL)
         return 1;
 
@@ -51,7 +53,7 @@ int execute_builtin_or_external(char **args) {
         exit(0);
     } else if(strcmp(args[0], "cd") == 0) {
         if(args[1] == NULL) {
-            printf("Введите больше аргументов для команды cd\n");
+            printf("Enter more arguments for the cd command.\n");
             fflush(stdout);
         } else {
             if (chdir(args[1]) != 0)
@@ -82,7 +84,6 @@ int main() {
         parse_command(command, args);
 
         execute_builtin_or_external(args);
-        
     }
 
     free(command);
