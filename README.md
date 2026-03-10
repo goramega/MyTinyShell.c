@@ -1,5 +1,5 @@
 **What does the program do?**
-  This is a trial project for writing your first small shell. It's practice for understanding the REPL loop and system calls on UNIX systems. It's also the first step toward preparing a full-scale project for your own OS.
+  This is a trial project for writing your first small shell. It's practice for understanding the REPL loop and system calls on UNIX systems. It's also the first step toward preparing a full-scale project for my own OS.
   
 **How to run it?**
   Just compile the program using your preferred method and run it.
